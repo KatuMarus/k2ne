@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  background: #111;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* CONTENEDOR GENERAL */
+
+#app {
+  text-align: center;
+  width: 420px;
+  padding: 20px;
+  border-radius: 16px;
+  background: #111;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+/* NOTA PRINCIPAL */
+
+#note {
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* METER */
+
+#meter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* LADOS ♭ / ♯ */
+
+.side {
+  width: 30px;
+  font-size: 24px;
+  opacity: 0.5;
+}
+
+/* CONTENEDOR DEL TUNER */
+
+#tuner {
+  flex: 1;
+  margin: 0;
+}
+
+/* BARRA */
+
+#bar {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* AGUJA */
+
+#needle {
+  position: absolute;
+  top: -5px;
+  width: 2px;
+  height: 20px;
+  background: white;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background 0.15s linear;
+}
+
+/* LEDS */
+
+#leds {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.led {
+  width: 4px;
+  height: 100%;
+  background: #222;
+  opacity: 0.3;
+  transition: all 0.1s linear;
+}
+
+.led.center {
+  background: lime;
+}
+
+.led.left {
+  background: red;
+}
+
+.led.right {
+  background: red;
+}
+
+/* STROBE */
+
+#strobe {
+  width: 100%;
+  height: 60px;
+  margin-top: 12px;
+
+  background: repeating-linear-gradient(
+    90deg,
+    white 0px,
+    white 2px,
+    black 2px,
+    black 6px
+  );
+
+  background-size: 20px 100%;
+}
+
+/* READOUTS */
+
+#readouts {
+  margin-top: 15px;
+  font-size: 12px;
+  opacity: 0.6;
+  display: flex;
+  justify-content: space-between;
+}
+
+#freq,
+#detune {
+  width: 45%;
+}
+
+/* DEBUG */
+
+#debugLabel {
+  margin-top: 80px;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+#debugToggle {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#debugToggle img {
+  width: 80px;
+}
+
+#debugOff {
+  display: none;
+}
+
+#tuningSelect {
+  margin-top: 10px;
+  width: 100%;
+  padding: 6px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#pitchCanvas {
+  width: 100%;
+  height: 80px;
+  margin-top: 10px;
+  background: #4e4848;
+  border-radius: 6px;
+}
+
+.led.active {
+  background: lime;
+}

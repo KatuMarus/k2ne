@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Guitar Tuner</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  
+  <body>
+    <div id="app">
+
+      <div id="note">--</div>
+
+      <div id="meter">
+
+        <div class="side left">♭</div>
+
+        <div id="tuner">
+
+          <div id="bar">
+            <div id="leds"></div>
+            <div id="needle"></div>
+          </div>
+
+          <!-- 🔥 NUEVO: STROBE -->
+          <div id="strobe"></div>
+
+          <!-- 🔥 NUEVO: PITCH HISTORY -->
+          <canvas id="pitchCanvas"></canvas>
+
+          <!-- 🔥 NUEVO: SELECTOR -->
+          <select id="tuningSelect">
+            <option value="standard">Standard (E A D G B E)</option>
+            <option value="dropD">Drop D (D A D G B E)</option>
+            <option value="halfStep">Half Step Down (Eb Ab Db Gb Bb Eb)</option>
+          </select>
+
+        </div>
+
+        <div class="side right">♯</div>
+
+      </div>
+
+      <div id="readouts">
+        <div id="freq">-- Hz</div>
+        <div id="detune">-- cents</div>
+      </div>
+
+      <div id="debugLabel">DEBUG MODE</div>
+
+      <div id="debugToggle">
+        <img id="debugOn" src="assets/ONswitch.png" />
+        <img id="debugOff" src="assets/OFFswitch.png" />
+      </div>
+
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
